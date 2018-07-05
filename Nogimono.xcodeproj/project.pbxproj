@@ -1,0 +1,801 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E3DA1A520EB59B400A78FE5 /* NGUpdateUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1A420EB59B400A78FE5 /* NGUpdateUserInfoVC.m */; };
+		3E3DA1A820EB5A2500A78FE5 /* NGMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1A720EB5A2500A78FE5 /* NGMessageVC.m */; };
+		3E3DA1AD20EB5F9600A78FE5 /* NGWebWithCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1AC20EB5F9600A78FE5 /* NGWebWithCommentVC.m */; };
+		3E3DA1B120EB616C00A78FE5 /* NGCommentCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1B020EB616C00A78FE5 /* NGCommentCellModel.m */; };
+		3E3DA1B420EB7FF300A78FE5 /* NGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1B320EB7FF300A78FE5 /* NGCommentCell.m */; };
+		3E3DA1BD20ECAB8300A78FE5 /* ReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1BB20ECAB8300A78FE5 /* ReplyInputView.m */; };
+		3E3DA1C020ECB62200A78FE5 /* NGCommentInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DA1BF20ECB62200A78FE5 /* NGCommentInputView.m */; };
+		3EAA8E8B20E22D2A001ADC30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8E8A20E22D2A001ADC30 /* AppDelegate.m */; };
+		3EAA8E9320E22D32001ADC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAA8E9220E22D32001ADC30 /* Assets.xcassets */; };
+		3EAA8E9620E22D32001ADC30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAA8E9420E22D32001ADC30 /* LaunchScreen.storyboard */; };
+		3EAA8E9920E22D32001ADC30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8E9820E22D32001ADC30 /* main.m */; };
+		3EAA8EA820E232F5001ADC30 /* NGBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EA720E232F5001ADC30 /* NGBaseVC.m */; };
+		3EAA8EAD20E23846001ADC30 /* UIView+NGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EAC20E23846001ADC30 /* UIView+NGFrame.m */; };
+		3EAA8EB120E23F95001ADC30 /* NGHttpHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EB020E23F95001ADC30 /* NGHttpHelp.m */; };
+		3EAA8EB420E243E3001ADC30 /* NGUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EB320E243E3001ADC30 /* NGUserInfoVC.m */; };
+		3EAA8EB720E243F6001ADC30 /* NGHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EB620E243F6001ADC30 /* NGHomeVC.m */; };
+		3EAA8EBA20E24409001ADC30 /* NGBlogsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EB920E24409001ADC30 /* NGBlogsVC.m */; };
+		3EAA8EBD20E24968001ADC30 /* NGMainTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EBC20E24968001ADC30 /* NGMainTabVC.m */; };
+		3EAA8EC420E24B23001ADC30 /* MaterialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EC120E24B23001ADC30 /* MaterialIcon.m */; };
+		3EAA8EC520E24B23001ADC30 /* material.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EAA8EC320E24B23001ADC30 /* material.ttf */; };
+		3EAA8ED220E26D74001ADC30 /* NGStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8ED120E26D74001ADC30 /* NGStyle.m */; };
+		3EAA8ED820E27706001ADC30 /* NGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8ED720E27706001ADC30 /* NGBaseModel.m */; };
+		3EAA8EDB20E2774A001ADC30 /* NGBlogCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EDA20E2774A001ADC30 /* NGBlogCellModel.m */; };
+		3EAA8EDE20E2777E001ADC30 /* NGBlogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EDD20E2777E001ADC30 /* NGBlogCell.m */; };
+		3EAA8EE220E37668001ADC30 /* NGBlogListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EE120E37668001ADC30 /* NGBlogListVC.m */; };
+		3EAA8EE520E380B2001ADC30 /* NGBlogListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EE420E380B2001ADC30 /* NGBlogListCellModel.m */; };
+		3EAA8EEB20E383AA001ADC30 /* NSString+NGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EEA20E383AA001ADC30 /* NSString+NGUtils.m */; };
+		3EAA8EEE20E38588001ADC30 /* NGBlogListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA8EED20E38588001ADC30 /* NGBlogListCell.m */; };
+		3EAA95DC20E4D229001ADC30 /* NGWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA95DB20E4D229001ADC30 /* NGWebViewVC.m */; };
+		3EAA95E120E4E56F001ADC30 /* YFViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA95E020E4E56F001ADC30 /* YFViewPager.m */; };
+		3EAA95E520E4EDC5001ADC30 /* NGNewsTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA95E420E4EDC4001ADC30 /* NGNewsTypeModel.m */; };
+		3EAA960A20E5C5D2001ADC30 /* NGNewsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA960920E5C5D2001ADC30 /* NGNewsCellModel.m */; };
+		3EAA960D20E5C605001ADC30 /* NGNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA960C20E5C605001ADC30 /* NGNewsCell.m */; };
+		3EAA961120E60B7F001ADC30 /* icon_userbackimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EAA961020E60B7E001ADC30 /* icon_userbackimg.png */; };
+		3EAA961620E61105001ADC30 /* NGLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961520E61105001ADC30 /* NGLoginVC.m */; };
+		3EAA961A20E62592001ADC30 /* NGLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961920E62591001ADC30 /* NGLoginCell.m */; };
+		3EAA961D20E9197E001ADC30 /* NGUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961C20E9197E001ADC30 /* NGUserInfoModel.m */; };
+		AD535DBC8A7703A7DE6E82CA /* libPods-Nogimono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E7ED60C8A64C1A5911CAB0 /* libPods-Nogimono.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03E7ED60C8A64C1A5911CAB0 /* libPods-Nogimono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nogimono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E3DA1A320EB59B400A78FE5 /* NGUpdateUserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGUpdateUserInfoVC.h; sourceTree = "<group>"; };
+		3E3DA1A420EB59B400A78FE5 /* NGUpdateUserInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGUpdateUserInfoVC.m; sourceTree = "<group>"; };
+		3E3DA1A620EB5A2500A78FE5 /* NGMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGMessageVC.h; sourceTree = "<group>"; };
+		3E3DA1A720EB5A2500A78FE5 /* NGMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGMessageVC.m; sourceTree = "<group>"; };
+		3E3DA1AB20EB5F9600A78FE5 /* NGWebWithCommentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGWebWithCommentVC.h; sourceTree = "<group>"; };
+		3E3DA1AC20EB5F9600A78FE5 /* NGWebWithCommentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGWebWithCommentVC.m; sourceTree = "<group>"; };
+		3E3DA1AF20EB616C00A78FE5 /* NGCommentCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommentCellModel.h; sourceTree = "<group>"; };
+		3E3DA1B020EB616C00A78FE5 /* NGCommentCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGCommentCellModel.m; sourceTree = "<group>"; };
+		3E3DA1B220EB7FF300A78FE5 /* NGCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommentCell.h; sourceTree = "<group>"; };
+		3E3DA1B320EB7FF300A78FE5 /* NGCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGCommentCell.m; sourceTree = "<group>"; };
+		3E3DA1BB20ECAB8300A78FE5 /* ReplyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyInputView.m; sourceTree = "<group>"; };
+		3E3DA1BC20ECAB8300A78FE5 /* ReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyInputView.h; sourceTree = "<group>"; };
+		3E3DA1BE20ECB62200A78FE5 /* NGCommentInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommentInputView.h; sourceTree = "<group>"; };
+		3E3DA1BF20ECB62200A78FE5 /* NGCommentInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGCommentInputView.m; sourceTree = "<group>"; };
+		3EAA8E8620E22D2A001ADC30 /* Nogimono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogimono.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAA8E8920E22D2A001ADC30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3EAA8E8A20E22D2A001ADC30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3EAA8E9220E22D32001ADC30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EAA8E9520E22D32001ADC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EAA8E9720E22D32001ADC30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EAA8E9820E22D32001ADC30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EAA8EA620E232F5001ADC30 /* NGBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBaseVC.h; sourceTree = "<group>"; };
+		3EAA8EA720E232F5001ADC30 /* NGBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBaseVC.m; sourceTree = "<group>"; };
+		3EAA8EAB20E23846001ADC30 /* UIView+NGFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+NGFrame.h"; sourceTree = "<group>"; };
+		3EAA8EAC20E23846001ADC30 /* UIView+NGFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+NGFrame.m"; sourceTree = "<group>"; };
+		3EAA8EAF20E23F95001ADC30 /* NGHttpHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHttpHelp.h; sourceTree = "<group>"; };
+		3EAA8EB020E23F95001ADC30 /* NGHttpHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHttpHelp.m; sourceTree = "<group>"; };
+		3EAA8EB220E243E3001ADC30 /* NGUserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGUserInfoVC.h; sourceTree = "<group>"; };
+		3EAA8EB320E243E3001ADC30 /* NGUserInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGUserInfoVC.m; sourceTree = "<group>"; };
+		3EAA8EB520E243F6001ADC30 /* NGHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGHomeVC.h; sourceTree = "<group>"; };
+		3EAA8EB620E243F6001ADC30 /* NGHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGHomeVC.m; sourceTree = "<group>"; };
+		3EAA8EB820E24409001ADC30 /* NGBlogsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogsVC.h; sourceTree = "<group>"; };
+		3EAA8EB920E24409001ADC30 /* NGBlogsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogsVC.m; sourceTree = "<group>"; };
+		3EAA8EBB20E24968001ADC30 /* NGMainTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGMainTabVC.h; sourceTree = "<group>"; };
+		3EAA8EBC20E24968001ADC30 /* NGMainTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGMainTabVC.m; sourceTree = "<group>"; };
+		3EAA8EC120E24B23001ADC30 /* MaterialIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialIcon.m; sourceTree = "<group>"; };
+		3EAA8EC220E24B23001ADC30 /* MaterialIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialIcon.h; sourceTree = "<group>"; };
+		3EAA8EC320E24B23001ADC30 /* material.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = material.ttf; sourceTree = "<group>"; };
+		3EAA8ED020E26D74001ADC30 /* NGStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGStyle.h; sourceTree = "<group>"; };
+		3EAA8ED120E26D74001ADC30 /* NGStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGStyle.m; sourceTree = "<group>"; };
+		3EAA8ED320E27436001ADC30 /* NGConstantHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGConstantHeader.h; sourceTree = "<group>"; };
+		3EAA8ED620E27706001ADC30 /* NGBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBaseModel.h; sourceTree = "<group>"; };
+		3EAA8ED720E27706001ADC30 /* NGBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBaseModel.m; sourceTree = "<group>"; };
+		3EAA8ED920E2774A001ADC30 /* NGBlogCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogCellModel.h; sourceTree = "<group>"; };
+		3EAA8EDA20E2774A001ADC30 /* NGBlogCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogCellModel.m; sourceTree = "<group>"; };
+		3EAA8EDC20E2777E001ADC30 /* NGBlogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogCell.h; sourceTree = "<group>"; };
+		3EAA8EDD20E2777E001ADC30 /* NGBlogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogCell.m; sourceTree = "<group>"; };
+		3EAA8EE020E37668001ADC30 /* NGBlogListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogListVC.h; sourceTree = "<group>"; };
+		3EAA8EE120E37668001ADC30 /* NGBlogListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogListVC.m; sourceTree = "<group>"; };
+		3EAA8EE320E380B2001ADC30 /* NGBlogListCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogListCellModel.h; sourceTree = "<group>"; };
+		3EAA8EE420E380B2001ADC30 /* NGBlogListCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogListCellModel.m; sourceTree = "<group>"; };
+		3EAA8EE920E383AA001ADC30 /* NSString+NGUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NGUtils.h"; sourceTree = "<group>"; };
+		3EAA8EEA20E383AA001ADC30 /* NSString+NGUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NGUtils.m"; sourceTree = "<group>"; };
+		3EAA8EEC20E38588001ADC30 /* NGBlogListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGBlogListCell.h; sourceTree = "<group>"; };
+		3EAA8EED20E38588001ADC30 /* NGBlogListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGBlogListCell.m; sourceTree = "<group>"; };
+		3EAA95DA20E4D229001ADC30 /* NGWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGWebViewVC.h; sourceTree = "<group>"; };
+		3EAA95DB20E4D229001ADC30 /* NGWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGWebViewVC.m; sourceTree = "<group>"; };
+		3EAA95DF20E4E56F001ADC30 /* YFViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFViewPager.h; sourceTree = "<group>"; };
+		3EAA95E020E4E56F001ADC30 /* YFViewPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFViewPager.m; sourceTree = "<group>"; };
+		3EAA95E320E4EDC4001ADC30 /* NGNewsTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGNewsTypeModel.h; sourceTree = "<group>"; };
+		3EAA95E420E4EDC4001ADC30 /* NGNewsTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGNewsTypeModel.m; sourceTree = "<group>"; };
+		3EAA960820E5C5D2001ADC30 /* NGNewsCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGNewsCellModel.h; sourceTree = "<group>"; };
+		3EAA960920E5C5D2001ADC30 /* NGNewsCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGNewsCellModel.m; sourceTree = "<group>"; };
+		3EAA960B20E5C605001ADC30 /* NGNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGNewsCell.h; sourceTree = "<group>"; };
+		3EAA960C20E5C605001ADC30 /* NGNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGNewsCell.m; sourceTree = "<group>"; };
+		3EAA961020E60B7E001ADC30 /* icon_userbackimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_userbackimg.png; sourceTree = "<group>"; };
+		3EAA961420E61105001ADC30 /* NGLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGLoginVC.h; sourceTree = "<group>"; };
+		3EAA961520E61105001ADC30 /* NGLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGLoginVC.m; sourceTree = "<group>"; };
+		3EAA961820E62591001ADC30 /* NGLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGLoginCell.h; sourceTree = "<group>"; };
+		3EAA961920E62591001ADC30 /* NGLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGLoginCell.m; sourceTree = "<group>"; };
+		3EAA961B20E9197E001ADC30 /* NGUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGUserInfoModel.h; sourceTree = "<group>"; };
+		3EAA961C20E9197E001ADC30 /* NGUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGUserInfoModel.m; sourceTree = "<group>"; };
+		BDF85AAA99C0B3083834DE34 /* Pods-Nogimono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nogimono.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono.release.xcconfig"; sourceTree = "<group>"; };
+		C2DEA09D2514C7A77EE753C0 /* Pods-Nogimono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nogimono.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EAA8E8320E22D2A001ADC30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD535DBC8A7703A7DE6E82CA /* libPods-Nogimono.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E3DA1A920EB5A7700A78FE5 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DA1AE20EB613F00A78FE5 /* Model */,
+				3E3DA1AA20EB5A9600A78FE5 /* View */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		3E3DA1AA20EB5A9600A78FE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DA1BC20ECAB8300A78FE5 /* ReplyInputView.h */,
+				3E3DA1BB20ECAB8300A78FE5 /* ReplyInputView.m */,
+				3E3DA1B220EB7FF300A78FE5 /* NGCommentCell.h */,
+				3E3DA1B320EB7FF300A78FE5 /* NGCommentCell.m */,
+				3E3DA1BE20ECB62200A78FE5 /* NGCommentInputView.h */,
+				3E3DA1BF20ECB62200A78FE5 /* NGCommentInputView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E3DA1AE20EB613F00A78FE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DA1AF20EB616C00A78FE5 /* NGCommentCellModel.h */,
+				3E3DA1B020EB616C00A78FE5 /* NGCommentCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EAA8E7D20E22D2A001ADC30 = {
+			isa = PBXGroup;
+			children = (
+				3EAA8E8820E22D2A001ADC30 /* Nogimono */,
+				3EAA8E8720E22D2A001ADC30 /* Products */,
+				CB1ABEBEF5228261BC3DD790 /* Pods */,
+				56F43496B01E9226EA66C5F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3EAA8E8720E22D2A001ADC30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8E8620E22D2A001ADC30 /* Nogimono.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EAA8E8820E22D2A001ADC30 /* Nogimono */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA960F20E60B73001ADC30 /* Resource */,
+				3EAA8EA320E22EE7001ADC30 /* Core */,
+				3EAA8EA220E22ECE001ADC30 /* Controllers */,
+				3EAA8E8920E22D2A001ADC30 /* AppDelegate.h */,
+				3EAA8E8A20E22D2A001ADC30 /* AppDelegate.m */,
+				3EAA8EBB20E24968001ADC30 /* NGMainTabVC.h */,
+				3EAA8EBC20E24968001ADC30 /* NGMainTabVC.m */,
+				3EAA8E9220E22D32001ADC30 /* Assets.xcassets */,
+				3EAA8E9420E22D32001ADC30 /* LaunchScreen.storyboard */,
+				3EAA8E9720E22D32001ADC30 /* Info.plist */,
+				3EAA8E9820E22D32001ADC30 /* main.m */,
+			);
+			path = Nogimono;
+			sourceTree = "<group>";
+		};
+		3EAA8E9F20E22D73001ADC30 /* Blogs */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EDF20E37636001ADC30 /* Controllers */,
+				3EAA8ED520E276E3001ADC30 /* Model */,
+				3EAA8ED420E27628001ADC30 /* View */,
+			);
+			path = Blogs;
+			sourceTree = "<group>";
+		};
+		3EAA8EA020E22D90001ADC30 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA95E220E4ED6E001ADC30 /* Model */,
+				3EAA95DE20E4E512001ADC30 /* View */,
+				3EAA95DD20E4E0B3001ADC30 /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3EAA8EA120E22DA9001ADC30 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA960E20E5F4F7001ADC30 /* Controllers */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		3EAA8EA220E22ECE001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DA1A920EB5A7700A78FE5 /* Comment */,
+				3EAA961220E60EF1001ADC30 /* User */,
+				3EAA95D820E4D1F0001ADC30 /* NGWebview */,
+				3EAA8EA120E22DA9001ADC30 /* UserInfo */,
+				3EAA8EA020E22D90001ADC30 /* Home */,
+				3EAA8E9F20E22D73001ADC30 /* Blogs */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA8EA320E22EE7001ADC30 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EC620E24CBA001ADC30 /* Constant */,
+				3EAA8EBF20E24B08001ADC30 /* Util */,
+				3EAA8EAE20E23B09001ADC30 /* API */,
+				3EAA8EAA20E23811001ADC30 /* Category */,
+				3EAA8EA420E230E6001ADC30 /* Base */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3EAA8EA420E230E6001ADC30 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EA620E232F5001ADC30 /* NGBaseVC.h */,
+				3EAA8EA720E232F5001ADC30 /* NGBaseVC.m */,
+				3EAA8ED620E27706001ADC30 /* NGBaseModel.h */,
+				3EAA8ED720E27706001ADC30 /* NGBaseModel.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3EAA8EAA20E23811001ADC30 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EAB20E23846001ADC30 /* UIView+NGFrame.h */,
+				3EAA8EAC20E23846001ADC30 /* UIView+NGFrame.m */,
+				3EAA8EE920E383AA001ADC30 /* NSString+NGUtils.h */,
+				3EAA8EEA20E383AA001ADC30 /* NSString+NGUtils.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3EAA8EAE20E23B09001ADC30 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EAF20E23F95001ADC30 /* NGHttpHelp.h */,
+				3EAA8EB020E23F95001ADC30 /* NGHttpHelp.m */,
+				3EAA961B20E9197E001ADC30 /* NGUserInfoModel.h */,
+				3EAA961C20E9197E001ADC30 /* NGUserInfoModel.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3EAA8EBF20E24B08001ADC30 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EC020E24B23001ADC30 /* MaterialIcons */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3EAA8EC020E24B23001ADC30 /* MaterialIcons */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EC220E24B23001ADC30 /* MaterialIcon.h */,
+				3EAA8EC120E24B23001ADC30 /* MaterialIcon.m */,
+				3EAA8EC320E24B23001ADC30 /* material.ttf */,
+			);
+			path = MaterialIcons;
+			sourceTree = "<group>";
+		};
+		3EAA8EC620E24CBA001ADC30 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8ED020E26D74001ADC30 /* NGStyle.h */,
+				3EAA8ED120E26D74001ADC30 /* NGStyle.m */,
+				3EAA8ED320E27436001ADC30 /* NGConstantHeader.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		3EAA8ED420E27628001ADC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EDC20E2777E001ADC30 /* NGBlogCell.h */,
+				3EAA8EDD20E2777E001ADC30 /* NGBlogCell.m */,
+				3EAA8EEC20E38588001ADC30 /* NGBlogListCell.h */,
+				3EAA8EED20E38588001ADC30 /* NGBlogListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3EAA8ED520E276E3001ADC30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8ED920E2774A001ADC30 /* NGBlogCellModel.h */,
+				3EAA8EDA20E2774A001ADC30 /* NGBlogCellModel.m */,
+				3EAA8EE320E380B2001ADC30 /* NGBlogListCellModel.h */,
+				3EAA8EE420E380B2001ADC30 /* NGBlogListCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EAA8EDF20E37636001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EB820E24409001ADC30 /* NGBlogsVC.h */,
+				3EAA8EB920E24409001ADC30 /* NGBlogsVC.m */,
+				3EAA8EE020E37668001ADC30 /* NGBlogListVC.h */,
+				3EAA8EE120E37668001ADC30 /* NGBlogListVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA95D820E4D1F0001ADC30 /* NGWebview */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA95D920E4D1FD001ADC30 /* Controllers */,
+			);
+			path = NGWebview;
+			sourceTree = "<group>";
+		};
+		3EAA95D920E4D1FD001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA95DA20E4D229001ADC30 /* NGWebViewVC.h */,
+				3EAA95DB20E4D229001ADC30 /* NGWebViewVC.m */,
+				3E3DA1AB20EB5F9600A78FE5 /* NGWebWithCommentVC.h */,
+				3E3DA1AC20EB5F9600A78FE5 /* NGWebWithCommentVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA95DD20E4E0B3001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EB520E243F6001ADC30 /* NGHomeVC.h */,
+				3EAA8EB620E243F6001ADC30 /* NGHomeVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA95DE20E4E512001ADC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA95DF20E4E56F001ADC30 /* YFViewPager.h */,
+				3EAA95E020E4E56F001ADC30 /* YFViewPager.m */,
+				3EAA960B20E5C605001ADC30 /* NGNewsCell.h */,
+				3EAA960C20E5C605001ADC30 /* NGNewsCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3EAA95E220E4ED6E001ADC30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA95E320E4EDC4001ADC30 /* NGNewsTypeModel.h */,
+				3EAA95E420E4EDC4001ADC30 /* NGNewsTypeModel.m */,
+				3EAA960820E5C5D2001ADC30 /* NGNewsCellModel.h */,
+				3EAA960920E5C5D2001ADC30 /* NGNewsCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EAA960E20E5F4F7001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA8EB220E243E3001ADC30 /* NGUserInfoVC.h */,
+				3EAA8EB320E243E3001ADC30 /* NGUserInfoVC.m */,
+				3E3DA1A320EB59B400A78FE5 /* NGUpdateUserInfoVC.h */,
+				3E3DA1A420EB59B400A78FE5 /* NGUpdateUserInfoVC.m */,
+				3E3DA1A620EB5A2500A78FE5 /* NGMessageVC.h */,
+				3E3DA1A720EB5A2500A78FE5 /* NGMessageVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA960F20E60B73001ADC30 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA961020E60B7E001ADC30 /* icon_userbackimg.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3EAA961220E60EF1001ADC30 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA961720E6253B001ADC30 /* View */,
+				3EAA961320E610D7001ADC30 /* Controllers */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3EAA961320E610D7001ADC30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA961420E61105001ADC30 /* NGLoginVC.h */,
+				3EAA961520E61105001ADC30 /* NGLoginVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EAA961720E6253B001ADC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA961820E62591001ADC30 /* NGLoginCell.h */,
+				3EAA961920E62591001ADC30 /* NGLoginCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56F43496B01E9226EA66C5F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03E7ED60C8A64C1A5911CAB0 /* libPods-Nogimono.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB1ABEBEF5228261BC3DD790 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2DEA09D2514C7A77EE753C0 /* Pods-Nogimono.debug.xcconfig */,
+				BDF85AAA99C0B3083834DE34 /* Pods-Nogimono.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EAA8E8520E22D2A001ADC30 /* Nogimono */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAA8E9C20E22D32001ADC30 /* Build configuration list for PBXNativeTarget "Nogimono" */;
+			buildPhases = (
+				848447A718FF776942409B95 /* [CP] Check Pods Manifest.lock */,
+				3EAA8E8220E22D2A001ADC30 /* Sources */,
+				3EAA8E8320E22D2A001ADC30 /* Frameworks */,
+				3EAA8E8420E22D2A001ADC30 /* Resources */,
+				E35058EA189D9029BE6397A6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nogimono;
+			productName = Nogimono;
+			productReference = 3EAA8E8620E22D2A001ADC30 /* Nogimono.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EAA8E7E20E22D2A001ADC30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = none;
+				TargetAttributes = {
+					3EAA8E8520E22D2A001ADC30 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3EAA8E8120E22D2A001ADC30 /* Build configuration list for PBXProject "Nogimono" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EAA8E7D20E22D2A001ADC30;
+			productRefGroup = 3EAA8E8720E22D2A001ADC30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EAA8E8520E22D2A001ADC30 /* Nogimono */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EAA8E8420E22D2A001ADC30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAA8EC520E24B23001ADC30 /* material.ttf in Resources */,
+				3EAA8E9620E22D32001ADC30 /* LaunchScreen.storyboard in Resources */,
+				3EAA8E9320E22D32001ADC30 /* Assets.xcassets in Resources */,
+				3EAA961120E60B7F001ADC30 /* icon_userbackimg.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		848447A718FF776942409B95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nogimono-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35058EA189D9029BE6397A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EAA8E8220E22D2A001ADC30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAA8EEE20E38588001ADC30 /* NGBlogListCell.m in Sources */,
+				3EAA8EDE20E2777E001ADC30 /* NGBlogCell.m in Sources */,
+				3E3DA1BD20ECAB8300A78FE5 /* ReplyInputView.m in Sources */,
+				3E3DA1C020ECB62200A78FE5 /* NGCommentInputView.m in Sources */,
+				3EAA8EBA20E24409001ADC30 /* NGBlogsVC.m in Sources */,
+				3EAA8ED820E27706001ADC30 /* NGBaseModel.m in Sources */,
+				3E3DA1A520EB59B400A78FE5 /* NGUpdateUserInfoVC.m in Sources */,
+				3EAA8EB120E23F95001ADC30 /* NGHttpHelp.m in Sources */,
+				3EAA8E9920E22D32001ADC30 /* main.m in Sources */,
+				3EAA8EBD20E24968001ADC30 /* NGMainTabVC.m in Sources */,
+				3EAA95E520E4EDC5001ADC30 /* NGNewsTypeModel.m in Sources */,
+				3EAA8EE520E380B2001ADC30 /* NGBlogListCellModel.m in Sources */,
+				3E3DA1AD20EB5F9600A78FE5 /* NGWebWithCommentVC.m in Sources */,
+				3EAA961D20E9197E001ADC30 /* NGUserInfoModel.m in Sources */,
+				3EAA8EEB20E383AA001ADC30 /* NSString+NGUtils.m in Sources */,
+				3EAA8EAD20E23846001ADC30 /* UIView+NGFrame.m in Sources */,
+				3EAA8EDB20E2774A001ADC30 /* NGBlogCellModel.m in Sources */,
+				3EAA960D20E5C605001ADC30 /* NGNewsCell.m in Sources */,
+				3EAA961620E61105001ADC30 /* NGLoginVC.m in Sources */,
+				3EAA8EC420E24B23001ADC30 /* MaterialIcon.m in Sources */,
+				3EAA961A20E62592001ADC30 /* NGLoginCell.m in Sources */,
+				3EAA8EB720E243F6001ADC30 /* NGHomeVC.m in Sources */,
+				3EAA8EA820E232F5001ADC30 /* NGBaseVC.m in Sources */,
+				3EAA960A20E5C5D2001ADC30 /* NGNewsCellModel.m in Sources */,
+				3EAA8E8B20E22D2A001ADC30 /* AppDelegate.m in Sources */,
+				3EAA8ED220E26D74001ADC30 /* NGStyle.m in Sources */,
+				3E3DA1B420EB7FF300A78FE5 /* NGCommentCell.m in Sources */,
+				3E3DA1A820EB5A2500A78FE5 /* NGMessageVC.m in Sources */,
+				3EAA8EB420E243E3001ADC30 /* NGUserInfoVC.m in Sources */,
+				3EAA95E120E4E56F001ADC30 /* YFViewPager.m in Sources */,
+				3EAA95DC20E4D229001ADC30 /* NGWebViewVC.m in Sources */,
+				3E3DA1B120EB616C00A78FE5 /* NGCommentCellModel.m in Sources */,
+				3EAA8EE220E37668001ADC30 /* NGBlogListVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EAA8E9420E22D32001ADC30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EAA8E9520E22D32001ADC30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EAA8E9A20E22D32001ADC30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3EAA8E9B20E22D32001ADC30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EAA8E9D20E22D32001ADC30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2DEA09D2514C7A77EE753C0 /* Pods-Nogimono.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DCJ5V29KGG;
+				INFOPLIST_FILE = Nogimono/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nogi.Nogimono;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EAA8E9E20E22D32001ADC30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDF85AAA99C0B3083834DE34 /* Pods-Nogimono.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DCJ5V29KGG;
+				INFOPLIST_FILE = Nogimono/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nogi.Nogimono;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EAA8E8120E22D2A001ADC30 /* Build configuration list for PBXProject "Nogimono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAA8E9A20E22D32001ADC30 /* Debug */,
+				3EAA8E9B20E22D32001ADC30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EAA8E9C20E22D32001ADC30 /* Build configuration list for PBXNativeTarget "Nogimono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAA8E9D20E22D32001ADC30 /* Debug */,
+				3EAA8E9E20E22D32001ADC30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EAA8E7E20E22D2A001ADC30 /* Project object */;
+}
