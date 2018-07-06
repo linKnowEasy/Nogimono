@@ -11,6 +11,7 @@
 #import "NGLoginVC.h"
 
 #import "NGUserInfoModel.h"
+#import "NGUpdateUserInfoVC.h"
 
 
 @interface NGUserInfoVC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -79,7 +80,10 @@
 - (void)updateView {
     
     UIImage *placeImg = [MaterialIcon ImageWithIcon:MaterialIconCode.mood iconColor:[UIColor blueColor] iconSize:100 imageSize:CGSizeMake(100, 100)];
-    [_photoImageView sd_setImageWithURL:[NSURL URLWithString:[NGUserInfoModel sharedInstance].userIconUrl] placeholderImage:placeImg];
+    
+    NSURL *iconUrl = [NSURL URLWithString:[NGUserInfoModel sharedInstance].userIconUrl];
+
+    [_photoImageView sd_setImageWithURL:iconUrl placeholderImage:placeImg];
     
     _userNameLabel.text = [NGUserInfoModel sharedInstance].nickname;
     _introduceLabel.text = [NGUserInfoModel sharedInstance].introduction;
@@ -230,7 +234,7 @@
 
     NGWeakObj(self)
     [NGHttpHelp api_update_user_icon:dic done:^(NSError *error, NSString *message, id retData) {
-        NSLog(@"api_update_user_icon-error----%@, message==%@, retData==%@", error, message, retData );
+        
         if (error) {
             /// 错误处理
             
@@ -244,7 +248,8 @@
             }
             
             
-            [selfWeak updateUserInfoWithIconUrl:@""];
+            NSString *url = retDic[@"data"][@"avatar"];
+            [selfWeak updateUserInfoWithIconUrl:url];
             
         }
         
@@ -266,10 +271,10 @@
     
     
     ///  (userid,usertoken,nickname,phone,email,intro,sex,avatar)
-    NSDictionary *userDic = @{@"userid":uid, @"usertoken":token, @"nickname":nickName, @"phone":phone, @"email":email, @"intro":intro, @"sex":@(sex), @"avatar": url};
+    NSDictionary *userDic = @{@"id":uid, @"token":token, @"nickname":nickName, @"phone":phone, @"email":email, @"introduction":intro, @"sex":@(sex), @"avatar": url};
     NGWeakObj(self)
     [NGHttpHelp api_update_user_info:userDic done:^(NSError *error, NSString *message, id retData) {
-        NSLog(@"api_update_user_info-error----%@, message==%@, retData==%@", error, message, retData );
+        
         if (error) {
             /// 错误处理
             
@@ -322,7 +327,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //   NSArray *titles = @[@"未读消息", @"设置", @"关于我们", @"文字识别"];
     
-    UIViewController *vc  = [[self.class alloc] init];
+    UIViewController *vc = nil;
+    
+    switch (indexPath.row) {
+        case 0:{
+            
+            break;
+        }
+        case 1:{
+            vc = [[NGUpdateUserInfoVC alloc] init];
+            break;
+        }
+        case 2:{
+            
+            break;
+        }
+        case 3:{
+            
+            break;
+        }
+        default:{
+            break;
+        }
+    }
+
+//    UIViewController *vc  = [[self.class alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
     

@@ -8,12 +8,20 @@
 
 #import "NGUpdateUserInfoVC.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "NGInputVC.h"
+#import "NGUserInfoModel.h"
+#import "NGConstantHeader.h"
+
 
 @interface NGUpdateUserInfoVC ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView *userInfoTableView;
 
 @property (nonatomic, strong) NSMutableArray *userInfoListArray;
+
+@property (nonatomic, strong) NSMutableDictionary *userInfoDic;
+
+@property (nonatomic, strong) NSDictionary *titlesDic;
 
 @end
 
@@ -28,13 +36,42 @@
 - (void)setupData {
     _userInfoListArray = [NSMutableArray array];
     
-    NSArray *titles = @[@"头像", @"昵称", @"性别", @"自我介绍", @"手机号码", @"电子邮箱"];
-
+    NSString *uid = [NGUserInfoModel sharedInstance].userID;
+    NSString *token = [NGUserInfoModel sharedInstance].token;
+    NSString *nickName = [NGUserInfoModel sharedInstance].nickname;
+    NSString *phone = [NGUserInfoModel sharedInstance].phone;
+    NSString *email = [NGUserInfoModel sharedInstance].email;
+    
+    NSString *intro = [NGUserInfoModel sharedInstance].introduction;
+    int sex = [NGUserInfoModel sharedInstance].sex;
+    NSString *url = [NGUserInfoModel sharedInstance].userIconUrl;
+    
+    NSDictionary *userDic = @{@"id":uid, @"token":token, @"nickname":nickName, @"phone":phone, @"email":email, @"introduction":intro, @"sex":@(sex), @"avatar": url};
+    _userInfoDic = [userDic mutableCopy];
+    
+    _titlesDic = @{@"头像":@"avatar", @"昵称":@"nickname", @"性别":@"sex", @"自我介绍":@"introduction", @"手机号码":@"phone", @"电子邮箱":@"email"};
+//    _titlesDic.allKeys;
+     NSArray *titles = @[@"头像", @"昵称", @"性别", @"自我介绍", @"手机号码", @"电子邮箱"];
     _userInfoListArray = [titles mutableCopy];
     
 }
 
 - (void)setupView {
+    NGWeakObj(self);
+    [self ng_leftBtnWithNrlImage:MaterialIconCode.arrow_back title:@"" action:^{
+        [selfWeak.navigationController popViewControllerAnimated:YES];
+    }];
+    [self ng_rigthBtnWithNrlImage:nil title:@"保存" action:^{
+        [selfWeak updateUserInfo];
+//
+//        NSString *text = selfWeak.inputView.text;
+//        if (selfWeak.inputBlock ) {
+//            selfWeak.inputBlock(text);
+//        }
+//        [selfWeak.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    
     
     _userInfoTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _userInfoTableView.delegate = self;
@@ -53,15 +90,25 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    static NSString *reuseID = @"NGUserInfoCell";
+    static NSString *reuseID = @"NGUserInfoModifyCell";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseID];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    NSDictionary *infoDic = _userInfoListArray[indexPath.row];
+    NSString *key = _userInfoListArray[indexPath.row];
+    NSString *infoKey = _titlesDic[key];
+    NSString *value = _userInfoDic[infoKey];
     
-    cell.textLabel.text = infoDic[@"title"];
-    cell.imageView.image = infoDic[@"icon"];
+    if (indexPath.row == 0) {
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:value]];
+        cell.textLabel.text = key;
+    } else {
+        cell.textLabel.text = key;
+        if ([value isKindOfClass:NSNumber.class]) {
+            value = value.intValue == 0 ? @"女" : @"男";
+        }
+        cell.detailTextLabel.text = value;
+    }
     
     return cell;
 }
@@ -78,11 +125,44 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //   NSArray *titles = @[@"未读消息", @"设置", @"关于我们", @"文字识别"];
+//       NSArray *titles = @[@"未读消息", @"设置", @"关于我们", @"文字识别"];
     
-    UIViewController *vc  = [[self.class alloc] init];
+    NSString *key = _userInfoListArray[indexPath.row];
+    NSString *infoKey = _titlesDic[key];
+    NSString *value = _userInfoDic[infoKey];
+    NGWeakObj(self)
+    switch (indexPath.row) {
+        case 0:{
+            
+            break;
+        }
+        case 1:
+        case 3:
+        case 4:
+        case 5: {
+            NGInputVC *vc = [[NGInputVC alloc] init];
+            vc.view.backgroundColor = [UIColor whiteColor];
+            vc.title = [NSString stringWithFormat:@"修改%@", key];
+            vc.originalValue = _userInfoDic[infoKey];
+            vc.inputBlock = ^(NSString *inputText) {
+                [selfWeak.userInfoDic setObject:inputText forKey:infoKey];
+                [selfWeak.userInfoTableView reloadData];
+            };
+            
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2:{
+            
+            break;
+        }
+        default:
+            break;
+    }
     
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+
     
 }
 
@@ -145,10 +225,59 @@
     //获取到的图片
     UIImage * image = [info valueForKey:UIImagePickerControllerEditedImage];
     
-    NSDictionary *dic = @{};
+    
+    NSData *imgData = UIImageJPEGRepresentation(image, 0.5);
+    
+    NSString *uid = [NGUserInfoModel sharedInstance].userID;
+    NSString *token = [NGUserInfoModel sharedInstance].token;
+    
+    //    "photo" NSData; "uid" String; "token" String
+    NSDictionary *dic = @{@"photo":imgData, @"uid":uid, @"token":token};
+    
+    NGWeakObj(self)
+    
+    [NGHttpHelp api_update_user_icon:dic done:^(NSError *error, NSString *message, id retData) {
+        
+        if (error) {
+            /// 错误处理
+            
+        } else {
+            NSDictionary *retDic = retData;
+            NSString *code = retDic[@"code"];
+            
+            if (code.intValue != 200) {
+                NSLog(@"api_update_user_icon-error----%@",retDic[@"message"] );
+                return ;
+            }
+            
+            NSString *url = retDic[@"data"][@"avatar"];
+            [selfWeak.userInfoDic setObject:url forKey:@"avatar"];
+        }
+    }];
+    
+}
 
+- (void)updateUserInfo {
     
-    
+    NGWeakObj(self)
+    [NGHttpHelp api_update_user_info:_userInfoDic done:^(NSError *error, NSString *message, id retData) {
+        
+        if (error) {
+            /// 错误处理
+            
+        } else {
+            
+            NSDictionary *retDic = retData;
+            NSString *code = retDic[@"code"];
+            
+            if (code.intValue != 200) {
+                NSLog(@"api_update_user_icon-error----%@",retDic[@"message"] );
+                return ;
+            }
+            
+            [selfWeak.navigationController popViewControllerAnimated:YES];
+        }
+    }];
 }
 
 

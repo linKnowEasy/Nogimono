@@ -30,7 +30,7 @@
     // 超时时间
     manager.requestSerializer.timeoutInterval = 30.0f;
     // 设置请求头
-    [manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
+    [manager.requestSerializer setValue:@"gzip, deflate, br" forHTTPHeaderField:@"Content-Encoding"];
     // 设置接收的Content-Type
     manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
     
@@ -185,24 +185,20 @@
 + (void)api_update_user_icon:(NSDictionary *)parameters done:(NGHttpBlock)block {
     NSString *url = [NSString stringWithFormat:@"%@%@", NGBaseURL, PATH_USER_AVATAR];
     
-    ////
-//    .addFormDataPart("uid", uid)
-//    .addFormDataPart("token", token)
-//    .addFormDataPart("photo", file.getName(),
-//    RequestBody.create(MediaType.parse("image/*"), file))
-    // parameters[@"photo"];  parameters[@"uid"]; token
+//    url = @"https://nghttp2.org/httpbin/post";
+  
     
-    [[NGHttpHelp sharedManager] POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
+    NSURLSessionDataTask *task = [[NGHttpHelp sharedManager] POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        //
         NSData *uidData = [parameters[@"uid"] dataUsingEncoding:NSUTF8StringEncoding];
+        
         [formData appendPartWithFormData:uidData name:@"uid"];
         
         NSData *tokenData = [parameters[@"token"] dataUsingEncoding:NSUTF8StringEncoding];
         [formData appendPartWithFormData:tokenData name:@"token"];
         
-        [formData appendPartWithFileData:parameters[@"photo"] name:@"photo" fileName:@"photo" mimeType:@"image/*"];
-
-//        [formData appendPartWithFileURL:[NSURL fileURLWithPath:theImagePath] name:@"file" error:nil];
+        
+        [formData appendPartWithFileData:parameters[@"photo"] name:@"photo" fileName:@"photo" mimeType:@"image/jpeg"];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -211,6 +207,9 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [NGHttpHelp dealFailureBlock:task error:error block:block];
     }];
+    
+    NSLog(@"task===%@",task.currentRequest.allHTTPHeaderFields);
+    
 }
 
 /// news 评论信息

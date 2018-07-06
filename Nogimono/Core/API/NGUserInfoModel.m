@@ -73,7 +73,6 @@ static NSString *NG_USER_TOKEN = @"ng_user_token";
             return ;
         }
         
-        
         if (error) {
             
             

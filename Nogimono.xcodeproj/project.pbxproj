@@ -44,6 +44,7 @@
 		3EAA961620E61105001ADC30 /* NGLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961520E61105001ADC30 /* NGLoginVC.m */; };
 		3EAA961A20E62592001ADC30 /* NGLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961920E62591001ADC30 /* NGLoginCell.m */; };
 		3EAA961D20E9197E001ADC30 /* NGUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA961C20E9197E001ADC30 /* NGUserInfoModel.m */; };
+		3EEA687620EE15DC004D41B1 /* NGInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA687520EE15DC004D41B1 /* NGInputVC.m */; };
 		AD535DBC8A7703A7DE6E82CA /* libPods-Nogimono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E7ED60C8A64C1A5911CAB0 /* libPods-Nogimono.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,8 @@
 		3EAA961920E62591001ADC30 /* NGLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGLoginCell.m; sourceTree = "<group>"; };
 		3EAA961B20E9197E001ADC30 /* NGUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGUserInfoModel.h; sourceTree = "<group>"; };
 		3EAA961C20E9197E001ADC30 /* NGUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGUserInfoModel.m; sourceTree = "<group>"; };
+		3EEA687420EE15DC004D41B1 /* NGInputVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGInputVC.h; sourceTree = "<group>"; };
+		3EEA687520EE15DC004D41B1 /* NGInputVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGInputVC.m; sourceTree = "<group>"; };
 		BDF85AAA99C0B3083834DE34 /* Pods-Nogimono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nogimono.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono.release.xcconfig"; sourceTree = "<group>"; };
 		C2DEA09D2514C7A77EE753C0 /* Pods-Nogimono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nogimono.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nogimono/Pods-Nogimono.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -410,6 +413,8 @@
 				3E3DA1A420EB59B400A78FE5 /* NGUpdateUserInfoVC.m */,
 				3E3DA1A620EB5A2500A78FE5 /* NGMessageVC.h */,
 				3E3DA1A720EB5A2500A78FE5 /* NGMessageVC.m */,
+				3EEA687420EE15DC004D41B1 /* NGInputVC.h */,
+				3EEA687520EE15DC004D41B1 /* NGInputVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				3EAA960D20E5C605001ADC30 /* NGNewsCell.m in Sources */,
 				3EAA961620E61105001ADC30 /* NGLoginVC.m in Sources */,
 				3EAA8EC420E24B23001ADC30 /* MaterialIcon.m in Sources */,
+				3EEA687620EE15DC004D41B1 /* NGInputVC.m in Sources */,
 				3EAA961A20E62592001ADC30 /* NGLoginCell.m in Sources */,
 				3EAA8EB720E243F6001ADC30 /* NGHomeVC.m in Sources */,
 				3EAA8EA820E232F5001ADC30 /* NGBaseVC.m in Sources */,
